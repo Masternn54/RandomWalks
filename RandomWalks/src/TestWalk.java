@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+package Random_Walk;
 
 import java.util.Scanner;
 
@@ -14,13 +14,12 @@ import java.util.Scanner;
 public class TestWalk {
 
     public static void main(String[] args) {
-        RandomWalk walk1 = new RandomWalk ( 5, 10);
-        
+        RandomWalk walk1 = new RandomWalk(5, 10);
+
         int maxSteps;   // maximum number of steps in a walk
         int maxCoord;   // the maximum x and y coordinate
         int x, y;       // starting x and y coordinates for a walk
-        
-        
+
         Scanner scan = new Scanner(System.in);
         System.out.println("\nRandom Walk Test Program");
         System.out.println();
@@ -32,13 +31,17 @@ public class TestWalk {
                 + "a space between: ");
         x = scan.nextInt();
         y = scan.nextInt();
-        
-        RandomWalk walk2 = new RandomWalk (maxCoord, maxSteps, x,y );
+
+        RandomWalk walk2 = new RandomWalk(maxCoord, maxSteps, x, y);
+
         System.out.println(walk1);
         System.out.println(walk2);
+        walk1.takeStep();
+        walk1.takeStep();
     }
-    public TestWalk(){
-       
+
+    public TestWalk() {
+
     }
-    
+
 }
