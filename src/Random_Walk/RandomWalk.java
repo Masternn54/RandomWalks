@@ -85,6 +85,17 @@ public class RandomWalk {
       }
         
     }
+//Add to the RandomWalk class a method named walk that has no parameters and returns nothing. Its job is to
+//simulate a complete random walk. That is, it should generate a sequence of steps as long the maximum number of
+//steps has not been taken and it is still in bounds (inside the square). This should be a very simple loop (while or do...
+//while) --- you will need to call the methods takeStep, moreSteps, and inBounds.
     
+   public void Walk(){
+      while(takeStep + moreSteps < inbounds){
+          
+          
+      }
+      
+   }    
 }
    
