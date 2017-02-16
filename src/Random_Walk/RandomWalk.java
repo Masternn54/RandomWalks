@@ -44,21 +44,29 @@ public class RandomWalk {
         Random rand = new Random();
 
         int n = rand.nextInt(4) + 1;
-        System.out.println(n);
+       
 
         switch (n) {
             case 1://right
                 xstart++;
+             System.out.println(steps++);    
+             System.out.println("you walked right");   
                 break;
             
             case 2://left
                 xstart--;
+               System.out.println(steps++); 
+               System.out.println("you walked left");
                 break;
             case 3://up
                 ystart++;
+                System.out.println(steps++);
+                System.out.println("you walked up");
                 break;
             case 4://down
                 ystart--;
+               System.out.println(steps++); 
+                System.out.println("you walked down");
                 break;
 
         }
@@ -90,12 +98,15 @@ public class RandomWalk {
 //steps has not been taken and it is still in bounds (inside the square). This should be a very simple loop (while or do...
 //while) --- you will need to call the methods takeStep, moreSteps, and inBounds.
     
-   public void Walk(){
-      while(takeStep + moreSteps < inbounds){
-          
-          
-      }
-      
-   }    
-}
+   void walk() {
+        while(moreSteps() && inBounds()){
+            takeStep();
+            System.out.println(this.toString());
+            
+        }
+        if (!moreSteps()) { System.out.println("Out of steps"); }
+        if (!inBounds()) { System.out.println("Out of bounds"); }
+    } 
+     
    
+}
