@@ -56,6 +56,11 @@ public class DrunkenWalk {
         DrunkenWalk.ystart = ystart;
         DrunkenWalk.outofBounds = outofBounds;
     }
+    @Override
+     public String toString() {
+        return "steps: " + steps + "\n" + "position: " + "(" + xstart + "," + ystart + ")";
+
+    }
 
     public void takeStep() {
         // up = 1 down = 2 left = 3 right = 4  
@@ -110,7 +115,10 @@ public class DrunkenWalk {
             return false;
 
         }
+        
 
     }
-
+   
+     
+    
 }
