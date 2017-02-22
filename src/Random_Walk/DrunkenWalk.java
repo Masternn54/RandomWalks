@@ -10,33 +10,28 @@ package Random_Walk;
  * @author Nichlas
  */
 public class DrunkenWalk {
+
     private static int outofBounds;
 
     public static void main(String[] args) {
-        
-         for (int i = 0; i < 100; i++)
-        {
+
+        for (int i = 0; i < 100; i++) {
             // here i can choose the amount of steps and the boundary
             RandomWalk DrunkWalk = new RandomWalk(200, 10);
-            
+
             DrunkWalk.walk();
-            
+
             System.out.println(DrunkWalk.toString());
-            
-            
-             if (DrunkWalk.inBounds() == false)
-            {
+
+            if (DrunkWalk.inBounds() == false) {
                 outofBounds++;
                 System.out.println("You went outside the square");
             }
-            
+
         }
-        
+
         System.out.println("the number of times he fell off: " + outofBounds);
-        
+
     }
-    
+
 }
-    
-
-
