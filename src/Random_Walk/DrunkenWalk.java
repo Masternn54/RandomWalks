@@ -16,7 +16,8 @@ public class DrunkenWalk {
         
          for (int i = 0; i < 100; i++)
         {
-            RandomWalk DrunkWalk = new RandomWalk(200, 50);
+            // here i can choose the amount of steps and the boundary
+            RandomWalk DrunkWalk = new RandomWalk(200, 10);
             
             DrunkWalk.walk();
             
